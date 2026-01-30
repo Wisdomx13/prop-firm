@@ -45,7 +45,7 @@ const Signin = () => {
       {/* Back to home */}
       <Link
         href="/"
-        className={`absolute top-6 left-6 flex items-center gap-2 hover:text-[#FFD700] transition-colors text-sm ${isDark ? 'text-gray-500' : 'text-gray-600'}`}
+        className={`absolute top-6 left-6 flex items-center gap-2 hover:text-[#FFD700] transition-colors text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-gray-700'}`}
       >
         <ArrowLeft className="w-4 h-4" />
         Back to Home
@@ -66,8 +66,8 @@ const Signin = () => {
 
           {/* Title */}
           <div className="text-center mb-6">
-            <h1 className={`text-xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>Welcome back</h1>
-            <p className={`text-sm ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>Sign in to your trading account</p>
+            <h1 className={`text-2xl font-black mb-1 ${isDark ? 'text-white' : 'text-black'}`}>Welcome back</h1>
+            <p className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-700'}`}>Sign in to your trading account</p>
           </div>
 
           {/* Form */}
@@ -95,7 +95,7 @@ const Signin = () => {
               <CheckBox id="remember" label="Remember me" />
               <Link
                 href="#"
-                className={`text-xs hover:text-[#FFD700] transition-colors ${isDark ? 'text-gray-400' : 'text-gray-500'}`}
+                className={`text-xs font-semibold hover:text-[#FFD700] transition-colors ${isDark ? 'text-gray-400' : 'text-gray-600'}`}
               >
                 Forgot password?
               </Link>
@@ -111,22 +111,22 @@ const Signin = () => {
 
           {/* Divider */}
           <div className="flex items-center gap-3 my-5">
-            <div className={`flex-1 h-px ${isDark ? 'bg-gray-800' : 'bg-gray-200'}`} />
-            <span className={`text-xs uppercase ${isDark ? 'text-gray-600' : 'text-gray-400'}`}>or</span>
-            <div className={`flex-1 h-px ${isDark ? 'bg-gray-800' : 'bg-gray-200'}`} />
+            <div className={`flex-1 h-px ${isDark ? 'bg-gray-800' : 'bg-gray-300'}`} />
+            <span className={`text-xs uppercase font-bold ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>or</span>
+            <div className={`flex-1 h-px ${isDark ? 'bg-gray-800' : 'bg-gray-300'}`} />
           </div>
 
           {/* Sign up link */}
-          <p className={`text-center text-sm ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>
+          <p className={`text-center text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-700'}`}>
             Don&apos;t have an account?{" "}
-            <Link href="/signup" className="text-[#FFD700] font-semibold hover:underline">
+            <Link href="/signup" className="text-[#FFD700] font-bold hover:underline">
               Sign up
             </Link>
           </p>
         </div>
 
         {/* Bottom text */}
-        <p className={`text-center text-xs mt-4 ${isDark ? 'text-gray-600' : 'text-gray-500'}`}>
+        <p className={`text-center text-xs font-medium mt-4 ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>
           Protected by industry-standard encryption
         </p>
       </div>

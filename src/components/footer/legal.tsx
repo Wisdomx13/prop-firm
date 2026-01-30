@@ -34,8 +34,8 @@ const Legal = () => {
         }`}>
           <Shield className={`w-4 h-4 ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`} />
         </div>
-        <h4 className={`text-sm font-semibold uppercase tracking-wider ${
-          isDark ? 'text-white/50' : 'text-gray-600'
+        <h4 className={`text-sm font-bold uppercase tracking-wider ${
+          isDark ? 'text-white/50' : 'text-gray-800'
         }`}>
           Legal
         </h4>
@@ -58,12 +58,12 @@ const Legal = () => {
               <ChevronRight className={`w-4 h-4 transition-all duration-300 group-hover:translate-x-1 ${
                 isDark
                   ? 'text-white/20 group-hover:text-[#FFD700]'
-                  : 'text-gray-300 group-hover:text-amber-600'
+                  : 'text-gray-400 group-hover:text-amber-600'
               }`} />
               <span className={`text-sm font-medium transition-colors ${
                 isDark
                   ? 'text-white/60 group-hover:text-white'
-                  : 'text-gray-600 group-hover:text-gray-900'
+                  : 'text-gray-700 group-hover:text-black'
               }`}>
                 {nav.label}
               </span>

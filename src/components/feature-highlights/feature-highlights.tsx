@@ -10,16 +10,16 @@ const FeatureHighlights = () => {
 
   const cardStyle = isDark
     ? "border-[#FFD700]/50 bg-black/70"
-    : "border-[#FFD700]/60 bg-white shadow-xl";
+    : "border-amber-400 bg-white shadow-2xl";
 
   const cardBoxShadow = isDark
     ? "0 0 30px rgba(255,215,0,0.2), inset 0 0 20px rgba(255,215,0,0.05)"
-    : "0 8px 32px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,215,0,0.3)";
+    : "0 12px 40px rgba(0,0,0,0.12), 0 0 0 2px rgba(255,193,7,0.4)";
 
-  const titleColor = "text-[#FFD700]";
-  const subtitleColor = isDark ? "text-white/90" : "text-gray-900 font-semibold";
-  const descColor = isDark ? "text-white/50" : "text-gray-600";
-  const iconColor = isDark ? "text-[#FFD700]" : "text-amber-600";
+  const titleColor = isDark ? "text-[#FFD700]" : "text-amber-500";
+  const subtitleColor = isDark ? "text-white/90" : "text-black font-bold";
+  const descColor = isDark ? "text-white/50" : "text-black/70";
+  const iconColor = isDark ? "text-[#FFD700]" : "text-amber-500";
 
   return (
     <section className={`relative py-16 md:py-24 ${isDark ? '' : 'bg-gradient-to-b from-gray-50 to-white'}`}>
@@ -87,11 +87,11 @@ const FeatureHighlights = () => {
               <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-[#FFD700]" />
               <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-[#FFD700]" />
               <div className="flex items-start gap-3">
-                <Clock className={`w-6 h-6 md:w-7 md:h-7 flex-shrink-0 ${iconColor}`} />
+                <Clock className={`w-7 h-7 md:w-8 md:h-8 flex-shrink-0 ${iconColor}`} />
                 <div>
-                  <div className={`text-xl md:text-2xl font-black leading-none ${titleColor}`}>Unlimited</div>
-                  <div className={`text-xs md:text-sm font-bold ${subtitleColor}`}>No Time Limits</div>
-                  <div className={`text-[10px] md:text-xs ${descColor}`}>Trade at your own pace</div>
+                  <div className={`text-2xl md:text-3xl font-black leading-none ${titleColor}`}>Unlimited</div>
+                  <div className={`text-sm md:text-base font-bold ${subtitleColor}`}>No Time Limits</div>
+                  <div className={`text-xs md:text-sm ${descColor}`}>Trade at your own pace</div>
                 </div>
               </div>
             </div>
@@ -106,11 +106,11 @@ const FeatureHighlights = () => {
               <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-[#FFD700]" />
               <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-[#FFD700]" />
               <div className="flex items-start gap-3">
-                <BarChart3 className={`w-6 h-6 md:w-7 md:h-7 flex-shrink-0 ${iconColor}`} />
+                <BarChart3 className={`w-7 h-7 md:w-8 md:h-8 flex-shrink-0 ${iconColor}`} />
                 <div>
-                  <div className={`text-xl md:text-2xl font-black leading-none ${titleColor}`}>6%</div>
-                  <div className={`text-xs md:text-sm font-bold ${subtitleColor}`}>Static Drawdown</div>
-                  <div className={`text-[10px] md:text-xs ${descColor}`}>Consistent rules</div>
+                  <div className={`text-2xl md:text-3xl font-black leading-none ${titleColor}`}>6%</div>
+                  <div className={`text-sm md:text-base font-bold ${subtitleColor}`}>Static Drawdown</div>
+                  <div className={`text-xs md:text-sm ${descColor}`}>Consistent rules</div>
                 </div>
               </div>
             </div>
@@ -125,11 +125,11 @@ const FeatureHighlights = () => {
               <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-[#FFD700]" />
               <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-[#FFD700]" />
               <div className="flex items-start gap-3">
-                <Percent className={`w-6 h-6 md:w-7 md:h-7 flex-shrink-0 ${iconColor}`} />
+                <Percent className={`w-7 h-7 md:w-8 md:h-8 flex-shrink-0 ${iconColor}`} />
                 <div>
-                  <div className={`text-xl md:text-2xl font-black leading-none ${titleColor}`}>90%</div>
-                  <div className={`text-xs md:text-sm font-bold ${subtitleColor}`}>Profit Split</div>
-                  <div className={`text-[10px] md:text-xs ${descColor}`}>Industry leading</div>
+                  <div className={`text-2xl md:text-3xl font-black leading-none ${titleColor}`}>90%</div>
+                  <div className={`text-sm md:text-base font-bold ${subtitleColor}`}>Profit Split</div>
+                  <div className={`text-xs md:text-sm ${descColor}`}>Industry leading</div>
                 </div>
               </div>
             </div>
@@ -144,11 +144,11 @@ const FeatureHighlights = () => {
               <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-[#FFD700]" />
               <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-[#FFD700]" />
               <div className="flex items-start gap-3">
-                <Zap className={`w-6 h-6 md:w-7 md:h-7 flex-shrink-0 ${iconColor}`} />
+                <Zap className={`w-7 h-7 md:w-8 md:h-8 flex-shrink-0 ${iconColor}`} />
                 <div>
-                  <div className={`text-xl md:text-2xl font-black leading-none ${titleColor}`}>24hrs</div>
-                  <div className={`text-xs md:text-sm font-bold ${subtitleColor}`}>Instant Payouts</div>
-                  <div className={`text-[10px] md:text-xs ${descColor}`}>Get paid immediately</div>
+                  <div className={`text-2xl md:text-3xl font-black leading-none ${titleColor}`}>24hrs</div>
+                  <div className={`text-sm md:text-base font-bold ${subtitleColor}`}>Instant Payouts</div>
+                  <div className={`text-xs md:text-sm ${descColor}`}>Get paid immediately</div>
                 </div>
               </div>
             </div>
@@ -163,11 +163,11 @@ const FeatureHighlights = () => {
               <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-[#FFD700]" />
               <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-[#FFD700]" />
               <div className="flex items-start gap-3">
-                <TrendingUp className={`w-6 h-6 md:w-7 md:h-7 flex-shrink-0 ${iconColor}`} />
+                <TrendingUp className={`w-7 h-7 md:w-8 md:h-8 flex-shrink-0 ${iconColor}`} />
                 <div>
-                  <div className={`text-xl md:text-2xl font-black leading-none ${titleColor}`}>2x</div>
-                  <div className={`text-xs md:text-sm font-bold ${subtitleColor}`}>Scaling Plan</div>
-                  <div className={`text-[10px] md:text-xs ${descColor}`}>Grow your account</div>
+                  <div className={`text-2xl md:text-3xl font-black leading-none ${titleColor}`}>2x</div>
+                  <div className={`text-sm md:text-base font-bold ${subtitleColor}`}>Scaling Plan</div>
+                  <div className={`text-xs md:text-sm ${descColor}`}>Grow your account</div>
                 </div>
               </div>
             </div>
@@ -182,11 +182,11 @@ const FeatureHighlights = () => {
               <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-[#FFD700]" />
               <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-[#FFD700]" />
               <div className="flex items-start gap-3">
-                <Shield className={`w-6 h-6 md:w-7 md:h-7 flex-shrink-0 ${iconColor}`} />
+                <Shield className={`w-7 h-7 md:w-8 md:h-8 flex-shrink-0 ${iconColor}`} />
                 <div>
-                  <div className={`text-xl md:text-2xl font-black leading-none ${titleColor}`}>$0</div>
-                  <div className={`text-xs md:text-sm font-bold ${subtitleColor}`}>No Hidden Fees</div>
-                  <div className={`text-[10px] md:text-xs ${descColor}`}>Transparent pricing</div>
+                  <div className={`text-2xl md:text-3xl font-black leading-none ${titleColor}`}>$0</div>
+                  <div className={`text-sm md:text-base font-bold ${subtitleColor}`}>No Hidden Fees</div>
+                  <div className={`text-xs md:text-sm ${descColor}`}>Transparent pricing</div>
                 </div>
               </div>
             </div>

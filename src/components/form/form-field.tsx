@@ -33,7 +33,7 @@ export const FormField: React.FC<FormFieldProps> = ({
 
   return (
     <div className="flex w-full relative flex-col gap-1">
-      <label htmlFor={id} className={`font-light text-left rounded text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+      <label htmlFor={id} className={`font-semibold text-left rounded text-sm ${isDark ? 'text-gray-200' : 'text-gray-800'}`}>
         {label}
       </label>
       <div
@@ -50,10 +50,10 @@ export const FormField: React.FC<FormFieldProps> = ({
           value={value}
           name={name}
           onChange={onChange}
-          className={`flex px-3 py-2 w-full h-12 text-sm leading-5 rounded-lg border border-[#B8860B] ease-in-out animate-[0.3s_ease_0s_1_normal_none_running_none] duration-[0.3s] overflow-x-clip overflow-y-clip shadow-[rgb(255,255,255)_0px_0px_0px_0px,rgba(59,130,246,0.5)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px] transition-colors ${
+          className={`flex px-3 py-2 w-full h-12 text-sm font-medium leading-5 rounded-lg border border-[#B8860B] ease-in-out animate-[0.3s_ease_0s_1_normal_none_running_none] duration-[0.3s] overflow-x-clip overflow-y-clip shadow-[rgb(255,255,255)_0px_0px_0px_0px,rgba(59,130,246,0.5)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px] transition-colors ${
             isDark
               ? 'bg-neutral-900 text-white placeholder:text-gray-500'
-              : 'bg-gray-50 text-gray-900 placeholder:text-gray-400'
+              : 'bg-white text-black placeholder:text-gray-500 shadow-sm'
           }`}
         />
 

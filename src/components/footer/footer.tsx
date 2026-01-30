@@ -45,8 +45,8 @@ const Footer = () => {
         {/* Bottom section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <p className={`text-sm flex items-center gap-2 ${isDark ? 'text-white/40' : 'text-gray-500'}`}>
-            © {new Date().getFullYear()} <span className={isDark ? 'text-[#FFD700]' : 'text-amber-600 font-semibold'}>Pipzen</span>. All rights reserved.
+          <p className={`text-sm flex items-center gap-2 ${isDark ? 'text-white/40' : 'text-gray-700'}`}>
+            © {new Date().getFullYear()} <span className={isDark ? 'text-[#FFD700]' : 'text-amber-700 font-bold'}>Pipzen</span>. All rights reserved.
           </p>
 
           {/* Powered by badge */}
@@ -61,8 +61,8 @@ const Footer = () => {
               border: '1px solid rgba(255,255,255,0.05)',
             } : {}}
           >
-            <Sparkles className={`w-4 h-4 ${isDark ? 'text-[#FFD700]' : 'text-amber-500'}`} />
-            <span className={`text-xs font-medium ${isDark ? 'text-white/50' : 'text-gray-600'}`}>Empowering Traders Worldwide</span>
+            <Sparkles className={`w-4 h-4 ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`} />
+            <span className={`text-xs font-semibold ${isDark ? 'text-white/50' : 'text-gray-700'}`}>Empowering Traders Worldwide</span>
           </div>
         </div>
       </div>

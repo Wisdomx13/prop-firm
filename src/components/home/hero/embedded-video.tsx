@@ -9,14 +9,29 @@ const EmbeddedVideo = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = true;
-      videoRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch(() => {
-        setIsPlaying(false);
-      });
-    }
+    const playVideo = async () => {
+      if (videoRef.current) {
+        videoRef.current.muted = true;
+        videoRef.current.defaultMuted = true;
+        try {
+          await videoRef.current.play();
+          setIsPlaying(true);
+        } catch {
+          // Retry after a short delay
+          setTimeout(async () => {
+            try {
+              if (videoRef.current) {
+                await videoRef.current.play();
+                setIsPlaying(true);
+              }
+            } catch {
+              setIsPlaying(false);
+            }
+          }, 100);
+        }
+      }
+    };
+    playVideo();
   }, []);
 
   useEffect(() => {
@@ -74,6 +89,7 @@ const EmbeddedVideo = () => {
             loop
             muted
             autoPlay
+            preload="auto"
             onClick={togglePlay}
           />
 
