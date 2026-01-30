@@ -20,6 +20,7 @@ interface HeroProps {
 }
 
 // 3D Letter Cube Component
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const LetterCube = ({ letter, delay = 0, isGold = false }: { letter: string; delay?: number; isGold?: boolean }) => {
   const baseColor = isGold ? '#FFD700' : '#FFFFFF';
   const glowColor = isGold ? 'rgba(255,215,0,0.8)' : 'rgba(255,255,255,0.5)';
