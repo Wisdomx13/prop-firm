@@ -1,0 +1,41 @@
+/* Define the animation for the bars */
+@keyframes barAnimation {
+  0% {
+    transform: scaleY(0.6);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.6);
+  }
+}
+
+/* Apply the animation to all paths with an id starting with "bar-" */
+[id^="bar-"] {
+  /* This is CRUCIAL for the "growing from the bottom" effect */
+  transform-origin: bottom;
+
+  /* Apply the animation */
+  animation-name: barAnimation;
+  animation-duration: 2.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Stagger the start of each bar's animation for a wave effect */
+#bar-1 {
+  animation-delay: 0s;
+}
+#bar-2 {
+  animation-delay: 0.2s;
+}
+#bar-3 {
+  animation-delay: 0.4s;
+}
+#bar-4 {
+  animation-delay: 0.6s;
+}
+#bar-5 {
+  animation-delay: 0.8s;
+}
