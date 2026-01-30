@@ -113,12 +113,12 @@ const EvaluationCylinder = ({ plan, isTransitioning, steps, activeStep, onStepCh
                                 key={i}
                                 onClick={() => onStepChange(step)}
                                 className={`
-                                  flex-1 px-3 py-1.5 rounded-md text-[10px] font-bold transition-all duration-300
+                                  flex-1 px-3 py-1.5 rounded-md text-xs font-bold transition-all duration-300
                                   ${activeStep === step
                                     ? 'bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black shadow-lg shadow-[#FFD700]/30'
                                     : isDark
                                       ? 'text-white/50 hover:text-white hover:bg-white/[0.05]'
-                                      : 'text-gray-500 hover:text-gray-900 hover:bg-gray-200'
+                                      : 'text-black font-bold hover:text-black hover:bg-gray-200'
                                   }
                                 `}
                               >
@@ -132,7 +132,7 @@ const EvaluationCylinder = ({ plan, isTransitioning, steps, activeStep, onStepCh
                         <div className="text-center flex-1 flex flex-col items-center justify-center">
                           <div className="flex items-center gap-2 mb-2">
                             <Wallet className={`w-4 h-4 ${isDark ? 'text-[#FFD700]/50' : 'text-amber-500/50'}`} />
-                            <span className={`text-[10px] uppercase tracking-[0.2em] font-medium ${isDark ? 'text-white/30' : 'text-gray-400'}`}>Account Size</span>
+                            <span className={`text-xs uppercase tracking-[0.15em] font-semibold ${isDark ? 'text-white/40' : 'text-black/70'}`}>Account Size</span>
                           </div>
                           <motion.h2
                             key={plan.account_size}
@@ -147,13 +147,13 @@ const EvaluationCylinder = ({ plan, isTransitioning, steps, activeStep, onStepCh
                           <div className={`w-20 h-px my-3 ${isDark ? 'bg-gradient-to-r from-transparent via-[#FFD700]/40 to-transparent' : 'bg-gradient-to-r from-transparent via-amber-400/60 to-transparent'}`} />
 
                           {/* Fee */}
-                          <span className={`text-[9px] uppercase tracking-[0.2em] font-medium mb-1 ${isDark ? 'text-white/30' : 'text-gray-400'}`}>One-Time Fee</span>
+                          <span className={`text-xs uppercase tracking-[0.15em] font-semibold mb-1 ${isDark ? 'text-white/40' : 'text-black/70'}`}>One-Time Fee</span>
                           <motion.h3
                             key={plan.onetime_fee}
                             initial={{ y: 10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.1 }}
-                            className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}
+                            className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}
                           >
                             {plan.onetime_fee}
                           </motion.h3>
@@ -167,8 +167,8 @@ const EvaluationCylinder = ({ plan, isTransitioning, steps, activeStep, onStepCh
                                 ? 'bg-white/[0.03] border-white/[0.05]'
                                 : 'bg-gray-50 border-gray-200'
                             }`}>
-                              <div className={`text-[9px] uppercase tracking-wider mb-0.5 ${isDark ? 'text-white/40' : 'text-gray-500'}`}>{m.label}</div>
-                              <div className={`text-sm font-bold ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`}>{m.value}</div>
+                              <div className={`text-[11px] uppercase tracking-wider mb-0.5 font-medium ${isDark ? 'text-white/50' : 'text-black/70'}`}>{m.label}</div>
+                              <div className={`text-base font-bold ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`}>{m.value}</div>
                             </div>
                           ))}
                         </div>
@@ -226,8 +226,8 @@ const EvaluationCylinder = ({ plan, isTransitioning, steps, activeStep, onStepCh
                   : 'bg-white border-gray-200 shadow-lg'
               }`}>
                 <div className="flex items-center gap-2 mb-3">
-                  <Zap className={`w-3.5 h-3.5 ${isDark ? 'text-[#FFD700]' : 'text-amber-500'}`} />
-                  <span className={`text-[10px] font-semibold uppercase tracking-wider ${isDark ? 'text-white/70' : 'text-gray-600'}`}>Key Metrics</span>
+                  <Zap className={`w-4 h-4 ${isDark ? 'text-[#FFD700]' : 'text-amber-500'}`} />
+                  <span className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-white/80' : 'text-black'}`}>Key Metrics</span>
                 </div>
 
                 <div className="space-y-1.5">
@@ -243,8 +243,8 @@ const EvaluationCylinder = ({ plan, isTransitioning, steps, activeStep, onStepCh
                           : 'bg-gray-50 border-gray-100 hover:border-amber-200'
                       }`}
                     >
-                      <span className={`text-[10px] transition-colors ${isDark ? 'text-white/50 group-hover:text-white/70' : 'text-gray-500 group-hover:text-gray-700'}`}>{m.label}</span>
-                      <span className={`text-[10px] font-bold ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`}>{m.value}</span>
+                      <span className={`text-xs transition-colors ${isDark ? 'text-white/60 group-hover:text-white/80' : 'text-black/70 group-hover:text-black'}`}>{m.label}</span>
+                      <span className={`text-xs font-bold ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`}>{m.value}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -270,8 +270,8 @@ const EvaluationCylinder = ({ plan, isTransitioning, steps, activeStep, onStepCh
                   : 'bg-white border-gray-200 shadow-lg'
               }`}>
                 <div className="flex items-center gap-2 mb-3">
-                  <Check className={`w-3.5 h-3.5 ${isDark ? 'text-[#FFD700]' : 'text-amber-500'}`} />
-                  <span className={`text-[10px] font-semibold uppercase tracking-wider ${isDark ? 'text-white/70' : 'text-gray-600'}`}>Included</span>
+                  <Check className={`w-4 h-4 ${isDark ? 'text-[#FFD700]' : 'text-amber-500'}`} />
+                  <span className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-white/80' : 'text-black'}`}>Included</span>
                 </div>
 
                 <div className="space-y-1.5">
@@ -287,8 +287,8 @@ const EvaluationCylinder = ({ plan, isTransitioning, steps, activeStep, onStepCh
                           : 'bg-gray-50 border-gray-100 hover:border-amber-200'
                       }`}
                     >
-                      <Check className={`w-3 h-3 flex-shrink-0 mt-0.5 transition-colors ${isDark ? 'text-[#FFD700]/60 group-hover:text-[#FFD700]' : 'text-amber-500/60 group-hover:text-amber-600'}`} />
-                      <span className={`text-[10px] leading-tight transition-colors ${isDark ? 'text-white/50 group-hover:text-white/70' : 'text-gray-500 group-hover:text-gray-700'}`}>{perk}</span>
+                      <Check className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 transition-colors ${isDark ? 'text-[#FFD700]/70 group-hover:text-[#FFD700]' : 'text-amber-500 group-hover:text-amber-600'}`} />
+                      <span className={`text-xs leading-tight transition-colors ${isDark ? 'text-white/60 group-hover:text-white/80' : 'text-black/70 group-hover:text-black'}`}>{perk}</span>
                     </motion.div>
                   ))}
                 </div>

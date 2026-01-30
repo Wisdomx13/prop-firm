@@ -32,7 +32,7 @@ const CheckBox: React.FC<CheckboxProps> = ({ label, id, name, onChecked }) => {
       />
       <label
         htmlFor={id}
-        className={`text-xs font-medium flex items-center gap-2 ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`}
+        className={`text-xs font-semibold flex items-center gap-2 ${isDark ? 'text-[#FFD700]' : 'text-gray-800'}`}
       >
         {isChecked ? (
           <IoCheckbox className={`w-5 h-5 cursor-pointer ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`} />

@@ -112,13 +112,13 @@ const ContactUs = () => {
         </div>
 
         {/* Disclaimer - Compact */}
-        <div className={`mt-8 p-4 rounded-xl ${
+        <div className={`mt-8 p-5 rounded-xl ${
           isDark
             ? 'bg-white/[0.02] border border-white/5'
-            : 'bg-white border border-gray-200 shadow-sm'
+            : 'bg-amber-50 border border-amber-200 shadow-md'
         }`}>
-          <p className={`text-[10px] leading-relaxed ${isDark ? 'text-white/40' : 'text-gray-500'}`}>
-            <span className={`font-semibold ${isDark ? 'text-white/60' : 'text-gray-700'}`}>DISCLAIMER:</span> PIPZEN is an affiliate of Forest Park FX LTD.
+          <p className={`text-xs leading-relaxed ${isDark ? 'text-white/50' : 'text-gray-700'}`}>
+            <span className={`font-bold ${isDark ? 'text-white/70' : 'text-amber-800'}`}>DISCLAIMER:</span> PIPZEN is an affiliate of Forest Park FX LTD.
             Forest Park FX LTD offers fee-based simulated trading assessments for Potential Traders. All funding assessments
             are provided by Forest Park FX LTD and all assessment fees are paid to Forest Park FX LTD. If you qualify for a
             Funded Account, you will be required to enter into a Trader Agreement with Forest Park FX LTD. Forest Park FX LTD

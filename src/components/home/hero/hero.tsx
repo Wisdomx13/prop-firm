@@ -241,16 +241,129 @@ const Hero = ({ hero }: HeroProps) => {
         </>
       ) : (
         <>
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-50/30 via-white to-gray-100" />
-          <div className="absolute inset-0 opacity-40" style={{
-            backgroundImage: `radial-gradient(circle at 20% 30%, rgba(255,215,0,0.2) 0%, transparent 50%),
-                              radial-gradient(circle at 80% 70%, rgba(255,215,0,0.15) 0%, transparent 50%)`
-          }} />
+          {/* Clean light background with subtle warm gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-amber-50/20 to-white" />
+
+          {/* Subtle golden accent circles */}
+          <div className="absolute inset-0 overflow-hidden">
+            {/* Large soft glow - top left */}
+            <div
+              className="absolute -left-[10%] -top-[20%] w-[600px] h-[600px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(255,215,0,0.08) 0%, transparent 70%)',
+              }}
+            />
+            {/* Medium glow - right side */}
+            <div
+              className="absolute right-[10%] top-[20%] w-[400px] h-[400px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(255,193,7,0.06) 0%, transparent 60%)',
+              }}
+            />
+            {/* Small accent - bottom */}
+            <div
+              className="absolute left-[30%] bottom-[10%] w-[300px] h-[300px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 60%)',
+              }}
+            />
+          </div>
+
+          {/* Subtle grid pattern for depth */}
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)`,
+              backgroundSize: '50px 50px'
+            }}
+          />
+
+          {/* Light mode decorative trading chart - top right */}
+          <div className="absolute top-[2%] right-[2%] w-[450px] h-[350px] md:w-[550px] md:h-[400px] lg:w-[650px] lg:h-[450px] opacity-[0.25]">
+            <svg viewBox="0 0 600 400" className="w-full h-full">
+              {/* Rising trend line */}
+              <path
+                d="M30 320 Q100 290 150 260 T250 200 T350 150 T450 100 T550 50"
+                stroke="url(#lightGradient1)"
+                strokeWidth="4"
+                fill="none"
+                strokeLinecap="round"
+              />
+              {/* Secondary trend line */}
+              <path
+                d="M30 340 Q100 320 150 300 T250 250 T350 200 T450 150 T550 100"
+                stroke="url(#lightGradient2)"
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+                opacity="0.5"
+              />
+              {/* Candlesticks - more of them */}
+              <g>
+                {/* Green candles (bullish) */}
+                <rect x="50" y="270" width="14" height="45" fill="#16a34a" rx="2" />
+                <line x1="57" y1="258" x2="57" y2="325" stroke="#16a34a" strokeWidth="2" />
+
+                <rect x="100" y="240" width="14" height="55" fill="#16a34a" rx="2" />
+                <line x1="107" y1="225" x2="107" y2="305" stroke="#16a34a" strokeWidth="2" />
+
+                <rect x="200" y="190" width="14" height="50" fill="#16a34a" rx="2" />
+                <line x1="207" y1="175" x2="207" y2="250" stroke="#16a34a" strokeWidth="2" />
+
+                <rect x="300" y="140" width="14" height="55" fill="#16a34a" rx="2" />
+                <line x1="307" y1="125" x2="307" y2="205" stroke="#16a34a" strokeWidth="2" />
+
+                <rect x="400" y="95" width="14" height="50" fill="#16a34a" rx="2" />
+                <line x1="407" y1="80" x2="407" y2="155" stroke="#16a34a" strokeWidth="2" />
+
+                <rect x="500" y="50" width="14" height="55" fill="#16a34a" rx="2" />
+                <line x1="507" y1="35" x2="507" y2="115" stroke="#16a34a" strokeWidth="2" />
+
+                <rect x="550" y="40" width="14" height="45" fill="#16a34a" rx="2" />
+                <line x1="557" y1="28" x2="557" y2="95" stroke="#16a34a" strokeWidth="2" />
+
+                {/* Red candles (bearish) */}
+                <rect x="150" y="225" width="14" height="35" fill="#dc2626" rx="2" />
+                <line x1="157" y1="215" x2="157" y2="270" stroke="#dc2626" strokeWidth="2" />
+
+                <rect x="250" y="175" width="14" height="30" fill="#dc2626" rx="2" />
+                <line x1="257" y1="165" x2="257" y2="215" stroke="#dc2626" strokeWidth="2" />
+
+                <rect x="350" y="130" width="14" height="28" fill="#dc2626" rx="2" />
+                <line x1="357" y1="120" x2="357" y2="168" stroke="#dc2626" strokeWidth="2" />
+
+                <rect x="450" y="85" width="14" height="32" fill="#dc2626" rx="2" />
+                <line x1="457" y1="75" x2="457" y2="127" stroke="#dc2626" strokeWidth="2" />
+              </g>
+              <defs>
+                <linearGradient id="lightGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#FFD700" />
+                  <stop offset="100%" stopColor="#FFA500" />
+                </linearGradient>
+                <linearGradient id="lightGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#FFA500" />
+                  <stop offset="100%" stopColor="#FF8C00" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          {/* Light mode golden sun/circle - top left accent */}
+          <div className="absolute -left-[5%] top-[10%] w-[200px] h-[200px] md:w-[300px] md:h-[300px]">
+            <div
+              className="w-full h-full rounded-full"
+              style={{
+                background: 'radial-gradient(circle at 70% 30%, rgba(255,215,0,0.15) 0%, rgba(255,193,7,0.05) 50%, transparent 70%)',
+              }}
+            />
+          </div>
         </>
       )}
 
       {/* Very Dark 3D Moon - Large, ominous (dark mode only) */}
-      <div className={`absolute -left-[15%] md:-left-[5%] top-[-10%] w-[400px] h-[400px] md:w-[600px] md:h-[600px] lg:w-[750px] lg:h-[750px] transition-opacity duration-300 ${isDark ? 'opacity-100' : 'opacity-0'}`}>
+      {isDark && (
+      <div className="absolute -left-[15%] md:-left-[5%] top-[-10%] w-[400px] h-[400px] md:w-[600px] md:h-[600px] lg:w-[750px] lg:h-[750px]">
         <div
           className="w-full h-full rounded-full"
           style={{
@@ -277,9 +390,11 @@ const Hero = ({ hero }: HeroProps) => {
           background: 'radial-gradient(circle at 80% 20%, rgba(60,60,80,0.1) 0%, transparent 30%)',
         }} />
       </div>
+      )}
 
-      {/* B-2 Stealth Style Spaceship (dark mode only) */}
-      <div className={`absolute top-[8%] md:top-[5%] right-[-15%] md:right-[-5%] lg:right-[0%] spaceship-float z-[5] transition-opacity duration-300 ${isDark ? 'opacity-100' : 'opacity-0'}`}>
+      {/* B-2 Stealth Style Spaceship - Dark mode only */}
+      {isDark && (
+      <div className="absolute top-[8%] md:top-[5%] right-[-15%] md:right-[-5%] lg:right-[0%] spaceship-float z-[5]">
         <svg width="550" height="220" viewBox="0 0 550 220" className="md:w-[650px] md:h-[260px] lg:w-[800px] lg:h-[320px]">
 
           {/* B-2 Flying Wing Shape - Main Body */}
@@ -375,12 +490,14 @@ const Hero = ({ hero }: HeroProps) => {
           </defs>
         </svg>
       </div>
+      )}
 
       {/* Subtle fog at bottom */}
       <div className={`absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t ${isDark ? 'from-[#000000]/80 via-[#020204]/40' : 'from-white/60 via-white/30'} to-transparent`} />
 
-      {/* 3D Prop Firm Money House - Background Effect (dark mode only) */}
-      <div className={`absolute right-[18%] md:right-[22%] lg:right-[25%] top-[50%] -translate-y-1/2 z-[1] hidden md:block transition-opacity duration-300 ${isDark ? 'opacity-60' : 'opacity-0'}`} style={{ filter: 'blur(0.5px) brightness(0.7)' }}>
+      {/* 3D Prop Firm Money House - Background Effect (Dark mode only) */}
+      {isDark && (
+      <div className="absolute right-[18%] md:right-[22%] lg:right-[25%] top-[50%] -translate-y-1/2 z-[1] hidden md:block opacity-60" style={{ filter: 'blur(0.5px) brightness(0.7)' }}>
         <div className="house-scene">
           <div className="house-wrapper relative" style={{ width: '480px', height: '530px' }}>
 
@@ -516,6 +633,7 @@ const Hero = ({ hero }: HeroProps) => {
           </div>
         </div>
       </div>
+      )}
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 md:px-8 lg:px-12 py-8">
@@ -527,13 +645,13 @@ const Hero = ({ hero }: HeroProps) => {
           {/* GET FUNDED TODAY - Big Bold Text */}
           <div className="mb-5">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight">
-              <span className={`block ${isDark ? 'text-white' : 'text-gray-900'}`}>GET</span>
+              <span className={`block ${isDark ? 'text-white' : 'text-black'}`}>GET</span>
               <span className="block text-[#FFD700]">FUNDED</span>
-              <span className={`block ${isDark ? 'text-white' : 'text-gray-900'}`}>TODAY</span>
+              <span className={`block ${isDark ? 'text-white' : 'text-black'}`}>TODAY</span>
             </h1>
           </div>
 
-          <p className={`text-sm md:text-base max-w-md leading-relaxed mb-4 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+          <p className={`text-sm md:text-base max-w-md leading-relaxed mb-4 ${isDark ? 'text-gray-400' : 'text-black/90'}`}>
             {description}
           </p>
 
@@ -552,7 +670,7 @@ const Hero = ({ hero }: HeroProps) => {
                 href={buttons[1].link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center gap-2 px-6 py-3 border border-[#FFD700]/30 font-semibold rounded-lg hover:bg-[#FFD700]/10 transition-all duration-300 ${isDark ? 'text-white' : 'text-gray-900'}`}
+                className={`inline-flex items-center gap-2 px-6 py-3 border border-[#FFD700]/30 font-semibold rounded-lg hover:bg-[#FFD700]/10 transition-all duration-300 ${isDark ? 'text-white' : 'text-black'}`}
               >
                 {buttons[1].icon === "discord" && <FaDiscord className="w-4 h-4 text-[#5865F2]" />}
                 {buttons[1].label}
@@ -569,7 +687,7 @@ const Hero = ({ hero }: HeroProps) => {
             ].map((stat, i) => (
               <div key={i}>
                 <div className={`text-lg md:text-xl font-bold ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`}>{stat.value}</div>
-                <div className={`text-[9px] md:text-[10px] uppercase tracking-wider ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>{stat.label}</div>
+                <div className={`text-[9px] md:text-[10px] uppercase tracking-wider ${isDark ? 'text-gray-500' : 'text-black/60'}`}>{stat.label}</div>
               </div>
             ))}
           </div>

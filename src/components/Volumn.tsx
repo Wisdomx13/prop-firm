@@ -102,20 +102,20 @@ const Volumn = (props: VolumnProps) => {
   return (
     <div className="relative">
       {/* Account Size Selector */}
-      <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-        <span className={`text-[10px] uppercase tracking-wider font-medium ${isDark ? 'text-white/40' : 'text-gray-500'}`}>Select Account:</span>
-        <div className="flex flex-wrap justify-center gap-1.5">
+      <div className="flex flex-wrap items-center justify-center gap-3 mb-5">
+        <span className={`text-xs uppercase tracking-wider font-semibold ${isDark ? 'text-white/50' : 'text-black/70'}`}>Select Account:</span>
+        <div className="flex flex-wrap justify-center gap-2">
           {currentAccountSizes.map((size: any, i: number) => (
             <button
               key={i}
               onClick={() => handleSizeChange(size)}
               className={`
-                px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-300
+                px-4 py-2 rounded-lg text-sm font-bold transition-all duration-300
                 ${selectedSize === size
                   ? "bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black shadow-lg shadow-[#FFD700]/25"
                   : isDark
-                    ? "bg-white/[0.04] text-white/50 hover:bg-white/[0.08] hover:text-white/80 border border-white/[0.06]"
-                    : "bg-gray-100 text-gray-600 hover:bg-amber-50 hover:text-gray-900 border border-gray-200"
+                    ? "bg-white/[0.04] text-white/60 hover:bg-white/[0.08] hover:text-white/90 border border-white/[0.08]"
+                    : "bg-gray-100 text-black/80 hover:bg-amber-50 hover:text-black border border-gray-200"
                 }
               `}
             >

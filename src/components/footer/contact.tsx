@@ -23,8 +23,8 @@ const ContactComponent = () => {
 
       {/* Contact section */}
       <div className="space-y-4">
-        <h3 className={`text-sm font-semibold uppercase tracking-wider ${
-          isDark ? 'text-white/50' : 'text-gray-600'
+        <h3 className={`text-sm font-bold uppercase tracking-wider ${
+          isDark ? 'text-white/50' : 'text-gray-800'
         }`}>
           Get In Touch
         </h3>
@@ -43,10 +43,10 @@ const ContactComponent = () => {
           }`}>
             <Mail className={`w-4 h-4 ${isDark ? 'text-[#FFD700]' : 'text-amber-600'}`} />
           </div>
-          <span className={`text-sm font-medium transition-colors ${
+          <span className={`text-sm font-semibold transition-colors ${
             isDark
               ? 'text-white/70 group-hover:text-white'
-              : 'text-gray-600 group-hover:text-gray-900'
+              : 'text-gray-700 group-hover:text-black'
           }`}>
             support@pipzen.io
           </span>
@@ -114,7 +114,7 @@ const SocialLink = ({
       <Icon className={`w-4 h-4 transition-colors ${
         isDark
           ? 'text-white/60 group-hover:text-[#FFD700]'
-          : 'text-gray-500 group-hover:text-amber-600'
+          : 'text-gray-600 group-hover:text-amber-600'
       }`} />
     </a>
   );
