@@ -512,6 +512,7 @@ export default function DashboardContent({ activeTab = "overview", isDark = true
   const winRate = 68.5;
 
   // Calculate calendar totals
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const calendarTotals = useMemo(() => {
     const profits = calendarData.filter(d => d.pnl > 0).reduce((sum, d) => sum + d.pnl, 0);
     const losses = Math.abs(calendarData.filter(d => d.pnl < 0).reduce((sum, d) => sum + d.pnl, 0));

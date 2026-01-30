@@ -10,7 +10,6 @@ import {
   FiTrendingUp,
   FiCalendar,
   FiBarChart2,
-  FiDownload,
   FiGlobe,
   FiGift,
   FiLogOut,
@@ -62,7 +61,7 @@ export default function DashboardLayout() {
   const [activeTab, setActiveTab] = useState("overview");
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
-  const { theme, toggleTheme, isDark } = useTheme();
+  const { toggleTheme, isDark } = useTheme();
 
   // Sample notifications
   const notifications = [
