@@ -129,7 +129,7 @@ const Hero = ({ hero }: HeroProps) => {
   const { isDark } = useTheme();
 
   return (
-    <section className={`relative min-h-screen md:h-screen flex items-center overflow-x-hidden overflow-y-visible md:overflow-hidden pt-28 sm:pt-24 md:pt-20 pb-8 md:pb-0 transition-colors duration-300 ${isDark ? 'bg-[#050508]' : 'bg-gradient-to-br from-gray-50 to-gray-100'}`}>
+    <section className={`relative min-h-screen md:h-screen flex items-center overflow-x-hidden overflow-y-visible md:overflow-hidden pt-28 sm:pt-24 md:pt-20 pb-8 md:pb-0 transition-colors duration-300 ${isDark ? 'bg-black' : 'bg-white'}`}>
       {/* CSS Animations */}
       <style jsx>{`
         @keyframes cubeFloat {
@@ -217,11 +217,11 @@ const Hero = ({ hero }: HeroProps) => {
         }
       `}</style>
 
-      {/* Background - Conditional on theme */}
+      {/* Background - Conditional on theme - seamless with header */}
       {isDark ? (
         <>
-          <div className="absolute inset-0 bg-[#020204]" />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#030306] via-[#050508] to-[#020203]" />
+          <div className="absolute inset-0 bg-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
           {/* Sparse Stars - Very subtle */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(60)].map((_, i) => (
@@ -575,7 +575,7 @@ const Hero = ({ hero }: HeroProps) => {
           </div>
 
           {/* Mobile Video - Inside content flow, below stats */}
-          <div className="md:hidden mt-4 w-full max-w-[380px] mx-auto">
+          <div className="md:hidden mt-4 w-full max-w-[420px] mx-auto">
             <div className="relative">
               <div className="absolute -inset-2 bg-[#FFD700]/10 blur-xl rounded-2xl" />
               <div className="relative rounded-xl overflow-hidden border-2 border-[#FFD700]/25 shadow-2xl shadow-[#FFD700]/15">
@@ -588,7 +588,7 @@ const Hero = ({ hero }: HeroProps) => {
 
       {/* Desktop Video - Bottom Right */}
       <div
-        className="absolute right-6 lg:right-10 bottom-20 md:bottom-14 w-[320px] lg:w-[380px] z-50"
+        className="absolute right-6 lg:right-12 bottom-16 md:bottom-10 w-[380px] lg:w-[480px] xl:w-[520px] z-50"
         style={{ display: 'none' }}
         id="desktop-video"
       >
@@ -613,7 +613,7 @@ const Hero = ({ hero }: HeroProps) => {
       `}</style>
 
       {/* Bottom gradient */}
-      <div className={`absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t pointer-events-none z-10 ${isDark ? 'from-[#050508]' : 'from-gray-100'} to-transparent`} />
+      <div className={`absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t pointer-events-none z-10 ${isDark ? 'from-black' : 'from-gray-100'} to-transparent`} />
     </section>
   );
 };

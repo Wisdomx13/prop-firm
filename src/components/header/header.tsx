@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <header
       className={`fixed flex justify-between items-center py-4 lg:py-5 px-4 md:px-8 lg:px-16 w-full z-[100] transition-all duration-500 ${
-        isDark ? "bg-black/80" : "bg-white/80"
+        isDark ? "bg-black" : "bg-white/95"
       } backdrop-blur-md ${showHeader ? "top-0" : "-top-24"}`}
     >
       <Brand />
